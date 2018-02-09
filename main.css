@@ -29,7 +29,6 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0.5em 7vw;
-  background-color: #eee;
 }
 
 #navigation {
@@ -44,15 +43,9 @@ header {
  * type -> class -> id */
 
 .nav-links {
-  display: block;
-  display: inline-block;
   padding: 0;
-}
-
-.nav-links {
   display: flex;
   justify-content: space-around;
-  padding: 0;
 }
 
 #navigation ul li {
