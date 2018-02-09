@@ -1,7 +1,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Muli", sans-serif;
 }
 
 body {
@@ -42,28 +42,24 @@ header {
 
 /* This has higher specificity /
  * type -> class -> id */
-/*#navigation ul {*/
-  /*display: flex;*/
-  /*justify-content: space-around;*/
-/*}*/
 
 .nav-links {
   display: block;
-  display: inline-block;  padding: 0;
+  display: inline-block;
+  padding: 0;
 }
 
 .nav-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0;
 }
 
 #navigation ul li {
   list-style-type: none;
-  display: inline-block;
 }
 
-@media(max-width: 768px) {
+/*@media(max-width: 768px) {
   #navigation button {
     display: block;
   }
@@ -74,7 +70,7 @@ header {
   #navigation ul li {
     display: block;
   }
-}
+}*/
 
 /*
  *
@@ -97,19 +93,16 @@ header {
   padding: 1em 0;
 }
 
-main {
-  /*max-width: 60em;*/
-  /*max-width: 60rem;*/
-}
-
 p {
   font-size: 1em;
   line-height: 1.48;
 }
 
 .hero {
+  position: relative;
+  left: 10%;
   display: grid;
-  grid-template-columns: 7fr 3fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: 
   "hero_text" "image";
 }
@@ -138,9 +131,54 @@ p {
 }
 
 .button {
-  border: 1px solid #000;
+  border: 1px solid black;
   padding: 10px 10px;
   border-radius: 5px;
-  color: #000;
+  color: black;
   text-decoration: none;
+}
+
+.beauty {
+  position: relative;
+  left: 10%;
+}
+
+.imggrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+  "i1 i2 i3"
+  "i4 i5 i6";
+}
+
+.imggrid figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.imggrid figure img {
+  object-fit: cover;
+  width: 90%;
+  height: 90vh;
+  margin: 10%;
+}
+
+.imggrid figure figcaption {
+  position: relative;
+  text-align: center;
+}
+
+.imggrid figure:nth-child(1) { grid-area: i1; } 
+.imggrid figure:nth-child(2) { grid-area: i2; }
+.imggrid figure:nth-child(3) { grid-area: i3; }
+.imggrid figure:nth-child(4) { grid-area: i4; } 
+.imggrid figure:nth-child(5) { grid-area: i5; }
+.imggrid figure:nth-child(6) { grid-area: i6; }
+
+footer {
+  position: relative;
+  background-color: #eee;
+  display: grid;
 }
